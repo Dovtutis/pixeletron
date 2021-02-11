@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a42739e4-69ec-4169-ad1f-01ece02a5476" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nYWrKvzLS3Baeqi7yExmey2i5h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Pragramavimas/TeamWorkTest-main/TeamWorkTest-main" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\pixelGame\app\models" />
+      <recent name="C:\wamp64\www\pixelGame\app\helpers" />
+      <recent name="C:\wamp64\www\pixelGame\app\views\inc" />
+      <recent name="C:\wamp64\www\pixelGame\app\views" />
+      <recent name="C:\wamp64\www\pixelGame\app\libraries" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\our_first_mvc\app\views\pages" />
+      <recent name="C:\wamp64\www\our_first_mvc\app" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a42739e4-69ec-4169-ad1f-01ece02a5476" name="Default Changelist" comment="" />
+      <created>1611567702092</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611567702092</updated>
+      <workItem from="1611567703222" duration="2871000" />
+      <workItem from="1611639772300" duration="15298000" />
+      <workItem from="1611726621513" duration="10684000" />
+      <workItem from="1612784319800" duration="12210000" />
+      <workItem from="1612868657186" duration="14102000" />
+      <workItem from="1612955971467" duration="15263000" />
+      <workItem from="1613022260929" duration="7863000" />
+    </task>
+    <task id="LOCAL-00001" summary="htaccess redirects done">
+      <created>1611646522595</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611646522595</updated>
+    </task>
+    <task id="LOCAL-00002" summary="require main libraries in bootstrap">
+      <created>1611646552188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611646552188</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first commit">
+      <created>1611646577395</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611646577395</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tested out core functions">
+      <created>1611648173848</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611648173848</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Handle last part - params and call user function">
+      <created>1611650781764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611650781764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="testing out if logic works">
+      <created>1611650794560</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611650794560</updated>
+    </task>
+    <task id="LOCAL-00007" summary="load views">
+      <created>1611652242737</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611652242737</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added header and footer in inc. Tested css and js">
+      <created>1611727633309</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611727633309</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Posts extend. Pages data added and works">
+      <created>1611727751672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611727751672</updated>
+    </task>
+    <task id="LOCAL-00010" summary="config file with constants">
+      <created>1611727828289</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611727828289</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Class autoLoad from libraries and add config file">
+      <created>1611727866802</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611727866802</updated>
+    </task>
+    <task id="LOCAL-00012" summary="base database class. Connect to db in constrcut">
+      <created>1611729715088</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611729715088</updated>
+    </task>
+    <task id="LOCAL-00013" summary="connecting to database errors work">
+      <created>1611732460220</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611732460220</updated>
+    </task>
+    <task id="LOCAL-00014" summary="connecting to database errors work">
+      <created>1611732465126</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611732465126</updated>
+    </task>
+    <task id="LOCAL-00015" summary="testing view, got posts array and working">
+      <created>1611738867984</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1611738867984</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="htaccess redirects done" />
+    <MESSAGE value="require main libraries in bootstrap" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="tested out core functions" />
+    <MESSAGE value="Handle last part - params and call user function" />
+    <MESSAGE value="testing out if logic works" />
+    <MESSAGE value="load views" />
+    <MESSAGE value="added header and footer in inc. Tested css and js" />
+    <MESSAGE value="Posts extend. Pages data added and works" />
+    <MESSAGE value="config file with constants" />
+    <MESSAGE value="Class autoLoad from libraries and add config file" />
+    <MESSAGE value="base database class. Connect to db in constrcut" />
+    <MESSAGE value="connecting to database errors work" />
+    <MESSAGE value="testing view, got posts array and working" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing view, got posts array and working" />
+  </component>
+</project>
