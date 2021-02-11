@@ -17,13 +17,20 @@ class Addpixel extends Controller
     {
             $data = [
                 'currentPage' => 'addPixel',
-                'currentPixel' => $this->pixelModel->getPixelById($id)
+                'currentPixel' => $this->pixelModel->getPixelById($id),
+                'currentParam' => ''
             ];
+
+            if ($id !== null){
+                $data['currentParam'] = 'edit';
+            }
             $this->view('pixels/addPixel', $data);
 
     }
 
-    public function add(){
+    public function add($id = null){
+
+        $idFromPost = $id;
 
         if ($this->vld->ifRequestIsPostAndSanitize()){
             $data = [
@@ -42,7 +49,15 @@ class Addpixel extends Controller
             $data['errors']['y'] = $this->vld->validateEmpty($data['coordinate_y'], 'Y Coordinate can not be empty');
             $data['errors']['coordinateErr'] = $this->vld->checkIfCoordinatesIsInBound($data['coordinate_x'], $data['coordinate_y'],
                 $data['pixelSize']);
-            $pixelsArr = $this->pixelModel->getAllPixels();
+
+            if ($idFromPost !== null){
+                $pixelsArr = $this->pixelModel->getAllPixels();
+                $pixelsArr = array_filter($pixelsArr, function($pixel) use($idFromPost){
+                    return $pixel['pixel_id'] !== $idFromPost;
+                });
+            }else{
+                $pixelsArr = $this->pixelModel->getAllPixels();
+            }
 
             if ($data['errors']['x'] === "" && $data['errors']['y'] === "" && $data['errors']['coordinateErr'] === ""){
                 $usedCoordinates = [];
@@ -72,13 +87,24 @@ class Addpixel extends Controller
                 $data['errors']['coordinateErr'] = $this->vld->checkIfCoordinateIsEmpty($usedCoordinates, $newPixelCoordinates);
 
                 if ($data['errors']['coordinateErr'] === "") {
-                    if ($this->pixelModel->addPixel($data)) {
-                        $data['success'] = "Pixeletron added successfully";
-                    } else {
-                        $data['errors']['coordinateErr'] = "Kazkas sugriuvo su idejimu";
+                    if ($idFromPost !== null){
+                        $data['pixel_id'] = $idFromPost;
+                        if ($this->pixelModel->editPixel($data)) {
+                            $data['success'] = "Pixeletron edited successfully";
+                        } else {
+                            $data['errors']['coordinateErr'] = "Kazkas sugriuvo su editinimu";
+                        }
+                        header('Content-Type: application/json');
+                        echo json_encode($data);
+                    }else{
+                        if ($this->pixelModel->addPixel($data)) {
+                            $data['success'] = "Pixeletron added successfully";
+                        } else {
+                            $data['errors']['coordinateErr'] = "Kazkas sugriuvo su idejimu";
+                        }
+                        header('Content-Type: application/json');
+                        echo json_encode($data);
                     }
-                    header('Content-Type: application/json');
-                    echo json_encode($data);
                 } else {
                     header('Content-Type: application/json');
                     echo json_encode($data);
@@ -101,7 +127,20 @@ class Addpixel extends Controller
 //        ];
 //
 //        header('Content-Type: application/json');
-//        echo json_encode($pixelsArr);
+//        echo json_encode($data);
+        }
+    }
+
+    public function delete($id)
+    {
+        if ($this->pixelModel->deletePixel(intval($id))) {
+            $data['deleteResponse'] = "Pixeletron deleted successfully";
+            header('Content-Type: application/json');
+            echo json_encode($data);
+        } else {
+            $data['deleteResponse'] = "Delete was unsuccessful";
+            header('Content-Type: application/json');
+            echo json_encode($data);
         }
     }
 }

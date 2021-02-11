@@ -9,6 +9,9 @@ echo "<h1>{$data['title']}</h1>";
         </div>
     </div>
 </div>
+<div class="container" id="deleteMessage">
+
+</div>
 <div class="container">
     <table class="table">
         <thead>
@@ -30,10 +33,12 @@ echo "<h1>{$data['title']}</h1>";
 <script>
     const gameContainer = document.getElementById('game-container');
     const tableBody = document.getElementById('tableBody');
+    const currentMethod = '<?php echo $data['currentMethod']?>';
+    const deleteMessageEl = document.getElementById('deleteMessage');
 
-    addPixel();
+    getPixels();
 
-    function addPixel(event){
+    function getPixels(event){
         fetch('<?php echo URLROOT . 'pixels/' . $data['currentMethod']?>', {
             method: 'post',
         }).then(resp => resp.json())
@@ -45,7 +50,9 @@ echo "<h1>{$data['title']}</h1>";
             }).catch(error => console.error())
     }
 
+
     function showAllPixels(pixels) {
+        gameContainer.innerHTML = ''
         pixels.forEach((pixel) => {
             console.log(pixel)
             gameContainer.innerHTML +=
@@ -53,14 +60,15 @@ echo "<h1>{$data['title']}</h1>";
                 <div id="pixeletron${pixel}" class="pixeletron" style="background-color: ${pixel.color}; width: ${pixel.size}px;
                     height: ${pixel.size}px; bottom: ${pixel.coordinate_y}px; left: ${pixel.coordinate_x}px"></div>
                 `
-
         });
     }
 
     function showTableInfo(pixels) {
-        pixels.forEach((pixel) => {
-            tableBody.innerHTML +=
-                `
+        if (currentMethod === 'showUserPixels'){
+            tableBody.innerHTML = '';
+            pixels.forEach((pixel) => {
+                tableBody.innerHTML +=
+                    `
                     <tr>
                         <th scope="row">${pixel.pixel_id}</th>
                         <td>${pixel.coordinate_x}</td>
@@ -69,13 +77,35 @@ echo "<h1>{$data['title']}</h1>";
                         <td>${pixel.size}px</td>
                         <td>
                             <a class="btn btn-primary" href="<?php echo URLROOT?>addpixel/index/${pixel.pixel_id}">EDIT</a>
-                            <a class="btn btn-danger" href="<?php echo URLROOT?>addpixel/index?>">DELETE</a>
+                            <button class="btn btn-danger btn-delete">DELETE</button>
                         </td>
                     </tr>
                 `
-
-        });
+            });
+            const deleteBtns = document.querySelectorAll('.btn-delete');
+            deleteBtns.forEach(item =>{
+                item.addEventListener('click', deletePixel)
+            })
+        }
     }
+
+    function deletePixel(event) {
+        $id = event.path[2].children[0].innerHTML;
+        console.log($id)
+        fetch(`<?php echo URLROOT . 'addpixel/delete/'?>${$id}`, {
+            method: 'post',
+        }).then(resp => resp.json())
+            .then(data => {
+                console.log(data);
+                showDeleteResponse(data.deleteResponse);
+            }).catch(error => console.error())
+    }
+
+    function showDeleteResponse(response){
+        deleteMessageEl.innerHTML = response;
+        getPixels();
+    }
+
 </script>
 <?php
 require APPROOT . '/views/inc/footer.php';

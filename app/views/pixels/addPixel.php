@@ -50,7 +50,6 @@
         const generalErrorEl = document.getElementById('generalError');
         const pixelInformationEl = document.getElementById('pixelInformation');
         const pixelSizeEl = document.getElementById('pixelSize');
-
         addPixelFormEl.addEventListener('submit', addPixel);
         pixelSizeEl.addEventListener('change', showPixel);
 
@@ -58,7 +57,7 @@
             event.preventDefault();
             resetErrors();
             const addPixelFormData = new FormData(addPixelFormEl);
-            fetch('<?php echo URLROOT . 'addpixel/add'?>', {
+            fetch('<?php echo URLROOT . 'addpixel/add/'?><?php echo $data['currentPixel'][0]['pixel_id'] ?? ''?>', {
                 method: 'post',
                 body: addPixelFormData
             }).then(resp => resp.json())
@@ -83,7 +82,6 @@
         }
 
         function showErrors(errors){
-            console.log("veikia errorai");
             if (errors.x){
                 xCoordinateEl.classList.add('is-invalid');
                 xCoordinateEl.nextElementSibling.innerHTML = errors.x;

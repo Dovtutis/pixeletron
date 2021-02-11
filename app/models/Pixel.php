@@ -59,6 +59,35 @@ class Pixel
             return false;
         }
     }
+
+    public function editPixel($data)
+    {
+        $this->db->query("UPDATE pixels SET coordinate_x = :coordinate_x, coordinate_y = :coordinate_y, color = :color, size = :size 
+        WHERE pixel_id = :pixel_id");
+        $this->db->bind(':pixel_id', $data['pixel_id']);
+        $this->db->bind(':coordinate_x', $data['coordinate_x']);
+        $this->db->bind(':coordinate_y', $data['coordinate_y']);
+        $this->db->bind(':color', $data['color']);
+        $this->db->bind(':size', $data['pixelSize']);
+
+        if ($this->db->execute()){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public function deletePixel($id)
+    {
+        $this->db->query("DELETE FROM pixels WHERE pixel_id = :pixel_id LIMIT 1");
+        $this->db->bind(':pixel_id', $id);
+
+        if ($this->db->execute()){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
 
 

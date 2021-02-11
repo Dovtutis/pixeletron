@@ -41,15 +41,6 @@ class Pixels extends Controller
         ];
         header('Content-Type: application/json');
         echo json_encode($data);
-
-
-//        if ($this->currentPage === 'userPixels'){
-//            $data = [
-//                'allPixels' => $this->pixelModel->getUserPixels($_SESSION['user_id'])
-//            ];
-//            header('Content-Type: application/json');
-//            echo json_encode($data);
-//        }
     }
 
     public function showUserPixels()
