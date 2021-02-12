@@ -13,7 +13,7 @@ echo "<h1>{$data['title']}</h1>";
 
 </div>
 <div class="container">
-    <table class="table">
+    <table class="table" id="pixelInfoTable">
         <thead>
         <tr class="table-primary">
             <th scope="col">Pixel ID</th>
@@ -35,6 +35,7 @@ echo "<h1>{$data['title']}</h1>";
     const tableBody = document.getElementById('tableBody');
     const currentMethod = '<?php echo $data['currentMethod']?>';
     const deleteMessageEl = document.getElementById('deleteMessage');
+    const pixelInfoTableEl = document.getElementById('pixelInfoTable');
 
     getPixels();
 
@@ -86,6 +87,8 @@ echo "<h1>{$data['title']}</h1>";
             deleteBtns.forEach(item =>{
                 item.addEventListener('click', deletePixel)
             })
+        }else {
+            pixelInfoTableEl.style.display = "none";
         }
     }
 
@@ -96,7 +99,7 @@ echo "<h1>{$data['title']}</h1>";
             method: 'post',
         }).then(resp => resp.json())
             .then(data => {
-                console.log(data);
+                console.log(data.deleteResponse);
                 showDeleteResponse(data.deleteResponse);
             }).catch(error => console.error())
     }

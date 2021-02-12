@@ -19,6 +19,15 @@ class Pixel
         return $result;
     }
 
+    public function getLatestPixel()
+    {
+        $sql = "SELECT * FROM `pixels` ORDER BY pixel_id DESC LIMIT 1";
+
+        $this->db->query($sql);
+        $result = $this->db->resultArray();
+        return $result;
+    }
+
     public function getUserPixels($id)
     {
         $this->db->query('SELECT * FROM pixels WHERE user_id = :id');

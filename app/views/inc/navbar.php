@@ -17,8 +17,8 @@
                     <a class="disabled nav-link active" href="#">Vilkommen <?php echo $_SESSION['user_name'] ?? null?></a>
                     <a class="nav-link <?php echo ($data['currentPage'] === 'myPixels') ? 'active' : ''?>" href="<?php echo URLROOT?>pixels/index/user">My Pixels</a>
                     <a class="nav-link <?php echo ($data['currentPage'] === 'addPixel') ? 'active' : ''?>" href="<?php echo URLROOT?>addpixel/index">Add New Pixel</a>
-                    <a class="nav-link" href="<?php echo URLROOT?>users/logout">Activity Log</a>
-                    <a class="nav-link" href="<?php echo URLROOT?>users/logout">Profile</a>
+                    <a class="nav-link <?php echo ($data['currentPage'] === 'activityLog') ? 'active' : ''?>" href="<?php echo URLROOT?>activity/index">Activity Log</a>
+                    <a class="nav-link" href="">Profile</a>
                     <a class="nav-link" href="<?php echo URLROOT?>users/logout">Logout</a>
                 <?php endif;?>
             </div>

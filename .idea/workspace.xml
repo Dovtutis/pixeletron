@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42739e4-69ec-4169-ad1f-01ece02a5476" name="Default Changelist" comment="" />
+    <list default="true" id="a42739e4-69ec-4169-ad1f-01ece02a5476" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Addpixel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Addpixel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Pixels.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pixels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Pixel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Pixel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inc/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inc/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pixels/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pixels/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Dovtutis/pixeletron" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1nYWrKvzLS3Baeqi7yExmey2i5h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -31,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Pragramavimas/TeamWorkTest-main/TeamWorkTest-main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_share" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
@@ -64,7 +79,8 @@
       <workItem from="1612784319800" duration="12210000" />
       <workItem from="1612868657186" duration="14102000" />
       <workItem from="1612955971467" duration="15263000" />
-      <workItem from="1613022260929" duration="17137000" />
+      <workItem from="1613022260929" duration="20994000" />
+      <workItem from="1613108673164" duration="6966000" />
     </task>
     <task id="LOCAL-00001" summary="htaccess redirects done">
       <created>1611646522595</created>

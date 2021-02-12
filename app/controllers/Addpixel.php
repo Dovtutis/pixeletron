@@ -5,12 +5,14 @@ class Addpixel extends Controller
 {
     private $vld;
     private $pixelModel;
+    private $activityModel;
 
     public function __construct()
     {
         if (!isLoggedIn()) redirect('/users/login');
         $this->vld = new Validation();
         $this->pixelModel = $this->model('Pixel');
+        $this->activityModel = $this->model('ActivityLog');
     }
 
     public function index($id = null)
@@ -90,20 +92,31 @@ class Addpixel extends Controller
                     if ($idFromPost !== null){
                         $data['pixel_id'] = $idFromPost;
                         if ($this->pixelModel->editPixel($data)) {
+                            $data['action'] = "Edited";
+                            $this->activityModel->addActivity($data);
                             $data['success'] = "Pixeletron edited successfully";
+                            header('Content-Type: application/json');
+                            echo json_encode($data);
                         } else {
                             $data['errors']['coordinateErr'] = "Kazkas sugriuvo su editinimu";
+                            header('Content-Type: application/json');
+                            echo json_encode($data);
                         }
-                        header('Content-Type: application/json');
-                        echo json_encode($data);
+
                     }else{
                         if ($this->pixelModel->addPixel($data)) {
+                            $latestPixel = $this->pixelModel->getLatestPixel();
+                            $data['pixel_id'] = $latestPixel[0]['pixel_id'];
+                            $data['action'] = "Created";
+                            $this->activityModel->addActivity($data);
                             $data['success'] = "Pixeletron added successfully";
+                            header('Content-Type: application/json');
+                            echo json_encode($data);
                         } else {
                             $data['errors']['coordinateErr'] = "Kazkas sugriuvo su idejimu";
+                            header('Content-Type: application/json');
+                            echo json_encode($data);
                         }
-                        header('Content-Type: application/json');
-                        echo json_encode($data);
                     }
                 } else {
                     header('Content-Type: application/json');
@@ -113,28 +126,25 @@ class Addpixel extends Controller
                 header('Content-Type: application/json');
                 echo json_encode($data);
             }
-
-
-
-//        $data = [
-//            'usedCoordinates' => $usedCoordinates,
-//            'x' => intval($_POST['x-coordinate']),
-//            'y' => $_POST['y-coordinate'],
-//            'newPixelCoordinates' => $newPixelCoordinates
-//              'x' => $xCoordinate,
-//              'y' => $yCoordinate,
-//              'pixelSize' => $pixelSize
-//        ];
-//
-//        header('Content-Type: application/json');
-//        echo json_encode($data);
         }
     }
 
     public function delete($id)
     {
+        $pixelForDelete = $this->pixelModel->getPixelById($id);
+
         if ($this->pixelModel->deletePixel(intval($id))) {
-            $data['deleteResponse'] = "Pixeletron deleted successfully";
+            $data = [
+                'coordinate_x' => $pixelForDelete[0]['coordinate_x'],
+                'coordinate_y' => $pixelForDelete[0]['coordinate_y'],
+                'color' => $pixelForDelete[0]['color'],
+                'pixelSize' => $pixelForDelete[0]['size'],
+                'userId' => $_SESSION['user_id'],
+                'pixel_id' => $id,
+                'action' => 'Deleted',
+                'deleteResponse' => "Pixeletron deleted successfully"
+            ];
+            $this->activityModel->addActivity($data);
             header('Content-Type: application/json');
             echo json_encode($data);
         } else {

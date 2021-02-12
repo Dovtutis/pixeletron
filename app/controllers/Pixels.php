@@ -10,7 +10,7 @@ class Pixels extends Controller
         $this->pixelModel = $this->model('Pixel');
     }
 
-    public function index($var)
+    public function index($var = null)
     {
         if ($var === 'all'){
             $data = [
