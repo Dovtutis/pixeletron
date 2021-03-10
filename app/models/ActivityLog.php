@@ -10,6 +10,12 @@ class ActivityLog
         $this->db = new Database();
     }
 
+    /**
+     * Creates user activity entry in activity log table. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $data
+     * @return void
+     */
     public function addActivity($data)
     {
         $this->db->query("INSERT INTO activitylog (`pixel_id`, `user_id`, `coordinate_x`, `coordinate_y`, `color`, `size`, `action`)
@@ -25,6 +31,12 @@ class ActivityLog
         $this->db->execute();
     }
 
+    /**
+     * Gets all the specified user activity from the database. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function getAllActivity($id)
     {
         $this->db->query('SELECT * FROM activitylog WHERE user_id = :id');

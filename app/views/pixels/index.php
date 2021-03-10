@@ -1,8 +1,9 @@
 <?php
 require APPROOT . '/views/inc/header.php';
-echo "<h1>{$data['title']}</h1>";
 ?>
-
+<div class="d-flex justify-content-center mt-2">
+    <h1>Pixeletron - add your pixel</h1>
+</div>
 <div class="pixel-container">
     <div class="game-container" id="game-container">
         <div id="">

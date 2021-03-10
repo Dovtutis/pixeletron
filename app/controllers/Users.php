@@ -24,6 +24,11 @@ class Users extends Controller
         redirect('/pages');
     }
 
+    /**
+     * Handles the registration and validation of new user.
+     *
+     * @return void
+     */
     public function register()
     {
         if ($this->vld->ifRequestIsPostAndSanitize()) {
@@ -86,6 +91,11 @@ class Users extends Controller
         }
     }
 
+    /**
+     * Handles the login and validation of user.
+     *
+     * @return void
+     */
     public function login()
     {
         if ($this->vld->ifRequestIsPostAndSanitize()){
@@ -131,6 +141,12 @@ class Users extends Controller
         }
     }
 
+    /**
+     * Handles the creation of session.
+     *
+     * @param [type] $userRow
+     * @return void
+     */
     public function createUserSession($userRow)
     {
         $_SESSION['user_id'] = $userRow->user_id;
@@ -139,6 +155,11 @@ class Users extends Controller
         redirect('pixels/index/all');
     }
 
+    /**
+     * Handles the logout functionality.
+     *
+     * @return void
+     */
     public function logout()
     {
         unset($_SESSION['user_id']);

@@ -10,6 +10,11 @@ class Pixel
         $this->db = new Database();
     }
 
+    /**
+     * Gets all the pixels from database. Handles SQL query, binds parameters and executes it.
+     *
+     * @return void
+     */
     public function getAllPixels()
     {
         $sql = "SELECT * FROM pixels";
@@ -19,6 +24,11 @@ class Pixel
         return $result;
     }
 
+    /**
+     * Gets the latests inserted pixel from the database. Handles SQL query, binds parameters and executes it.
+     *
+     * @return void
+     */
     public function getLatestPixel()
     {
         $sql = "SELECT * FROM `pixels` ORDER BY pixel_id DESC LIMIT 1";
@@ -28,6 +38,9 @@ class Pixel
         return $result;
     }
 
+    /**
+     * Gets the specified user pixels by id from the database. Handles SQL query, binds parameters and executes it.
+     */
     public function getUserPixels($id)
     {
         $this->db->query('SELECT * FROM pixels WHERE user_id = :id');
@@ -40,6 +53,12 @@ class Pixel
         return false;
     }
 
+    /**
+     * Gets specified pixel by it's id from the database. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function getPixelById($id)
     {
         $this->db->query('SELECT * FROM pixels WHERE pixel_id = :id');
@@ -52,6 +71,12 @@ class Pixel
         return false;
     }
 
+    /**
+     * Adds pixel to the database. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $data
+     * @return void
+     */
     public function addPixel($data)
     {
         $this->db->query("INSERT INTO pixels (`user_id`, `coordinate_x`, `coordinate_y`, `color`, `size`)
@@ -69,6 +94,12 @@ class Pixel
         }
     }
 
+    /**
+     * Edits specified pixel in the database. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $data
+     * @return void
+     */
     public function editPixel($data)
     {
         $this->db->query("UPDATE pixels SET coordinate_x = :coordinate_x, coordinate_y = :coordinate_y, color = :color, size = :size 
@@ -86,6 +117,9 @@ class Pixel
         }
     }
 
+    /**
+     * Deletes specified pixel by id in the database. Handles SQL query, binds parameters and executes it.
+     */
     public function deletePixel($id)
     {
         $this->db->query("DELETE FROM pixels WHERE pixel_id = :pixel_id LIMIT 1");

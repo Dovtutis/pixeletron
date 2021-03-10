@@ -1,6 +1,14 @@
 <?php
 session_start();
 
+/**
+ * Handles flash messages by request.
+ *
+ * @param string $name
+ * @param string $message
+ * @param string $class
+ * @return void
+ */
 function flash($name = '', $message = '', $class = 'alert alert-success')
 {
     if (!empty($name)){
@@ -22,6 +30,11 @@ function flash($name = '', $message = '', $class = 'alert alert-success')
     }
 }
 
+/**
+ * Checks is user is logged in.
+ *
+ * @return boolean
+ */
 function isLoggedIn(){
     if (isset($_SESSION['user_id'])) return true;
     return false;

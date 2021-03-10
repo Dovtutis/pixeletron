@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a42739e4-69ec-4169-ad1f-01ece02a5476" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Addpixel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Addpixel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Pixels.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Pixels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Pixel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Pixel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/inc/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inc/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pixels/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pixels/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_share" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../almostLara" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
@@ -80,7 +75,23 @@
       <workItem from="1612868657186" duration="14102000" />
       <workItem from="1612955971467" duration="15263000" />
       <workItem from="1613022260929" duration="20994000" />
-      <workItem from="1613108673164" duration="6966000" />
+      <workItem from="1613108673164" duration="8336000" />
+      <workItem from="1613394757336" duration="3397000" />
+      <workItem from="1613460852861" duration="3006000" />
+      <workItem from="1613572180594" duration="1725000" />
+      <workItem from="1613628066088" duration="1635000" />
+      <workItem from="1613648119293" duration="1802000" />
+      <workItem from="1613714443410" duration="28000" />
+      <workItem from="1613738678861" duration="1821000" />
+      <workItem from="1613997906491" duration="1856000" />
+      <workItem from="1614060156414" duration="745000" />
+      <workItem from="1614082222288" duration="1481000" />
+      <workItem from="1614093713105" duration="1209000" />
+      <workItem from="1614177519096" duration="619000" />
+      <workItem from="1614341104921" duration="1388000" />
+      <workItem from="1614415705311" duration="2766000" />
+      <workItem from="1614588288340" duration="1198000" />
+      <workItem from="1614666683909" duration="2167000" />
     </task>
     <task id="LOCAL-00001" summary="htaccess redirects done">
       <created>1611646522595</created>

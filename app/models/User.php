@@ -9,6 +9,12 @@ class User
         $this->db = new Database();
     }
 
+    /**
+     * Searches for the user in the database by email. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $email
+     * @return void
+     */
     public function findUserByEmail($email)
     {
         $this->db->query("SELECT * FROM users WHERE email = :email");
@@ -21,6 +27,12 @@ class User
         }
     }
 
+    /**
+     * Creates user in the database. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $data
+     * @return void
+     */
     public function register($data)
     {
         $this->db->query("INSERT INTO users (`firstname`, `lastname`, `email`, `password`) VALUES (:firstname, :lastname, :email, :password)");
@@ -36,6 +48,13 @@ class User
         }
     }
 
+    /**
+     * Tries to login the user. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $email
+     * @param [type] $password
+     * @return void
+     */
     public function login($email, $password)
     {
         $this->db->query("SELECT * FROM users WHERE `email` = :email");
@@ -55,6 +74,12 @@ class User
         }
     }
 
+    /**
+     * Gets specified user by given id. Handles SQL query, binds parameters and executes it.
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function getUserById($id)
     {
         $this->db->query("SELECT name, email FROM users WHERE id = :id");

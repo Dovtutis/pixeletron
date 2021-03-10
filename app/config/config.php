@@ -7,7 +7,7 @@ define('DB_NAME', 'pixelotron');
 
 define('APPROOT', dirname(dirname(__FILE__)));
 define('URLROOT', 'http://localhost/pixelGame/');
-define('SITENANE', 'Pixel Game');
+define('SITENANE', 'Pixeletron');
 define("APPVERSION", "1.0.0");
 
 //need to change .htaccess in public

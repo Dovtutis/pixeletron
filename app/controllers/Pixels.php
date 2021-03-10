@@ -34,6 +34,11 @@ class Pixels extends Controller
 
     }
 
+    /**
+     * Handles the display of all pixels
+     *
+     * @return void
+     */
     public function showAllPixels()
     {
         $data = [
@@ -43,6 +48,10 @@ class Pixels extends Controller
         echo json_encode($data);
     }
 
+    /**
+     * Handles the display of specified users pixels 
+     * 
+     */
     public function showUserPixels()
     {
         $userId = $_SESSION['user_id'];

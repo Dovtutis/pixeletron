@@ -30,6 +30,12 @@ class Addpixel extends Controller
 
     }
 
+    /**
+     * Handles addition and validation of new pixel.
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function add($id = null){
 
         $idFromPost = $id;
@@ -129,6 +135,12 @@ class Addpixel extends Controller
         }
     }
 
+    /**
+     * Handles the delete of existing pixels
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function delete($id)
     {
         $pixelForDelete = $this->pixelModel->getPixelById($id);
