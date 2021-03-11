@@ -2,7 +2,7 @@
 
 Pixeletron is a webpage with register and login system, where registered users can add pixels of different size and color to the field which is used by all users.
 
-## Tasks which vere required for this page
+## Tasks which were required for this page
 - Register and Login system with validation.
 - Pixel creation system, where it's possible to select pixel size and color. 
 - Pixel creation validation system, which validates if the space for new pixel is empty and valid.
